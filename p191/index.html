@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Flight Simulator</title>
+  <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+</head>
+<script src="controls.js"></script>
+
+<body>
+  <a-scene aircraft-controls>
+    <!-- Blue sky with sun and lighting -->
+    <a-light type="directional" position="2 500 -3" intensity="1" target="#cameraRig"></a-light>
+
+    <!-- Ground -->
+    <a-circle rotation="-90 0 0" radius="450" src="ground.jpeg"></a-circle>
+
+    <!--Fence-->
+    <a-entity id="fence" gltf-model="cage/scene.gltf" scale="1800 500 1800" position="0 -10 0"></a-entity>
+
+    <!-- Camera Rig -->
+    <a-entity id="cameraRig" position="0 100 0" rotation="0 0 0">
+      <a-camera look-controls></a-camera>
+    </a-entity>
+
+    <a-videosphere src="17770191.mp4"></a-videosphere>
+  </a-scene>
+</body>
+
+</html>
